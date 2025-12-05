@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citas Literarias</title>
+    <title>Citas Célebres</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>CITAS LITERARIAS</h1>
+        <h1>CITAS CÉLEBRES</h1>
         <p id="cita-del-dia"></p>
     </header>
 
     <nav>
-        <input type="text" id="buscador" placeholder="Buscar citas por palabras...">
-        <button onclick="buscar()">Buscar</button>
+        <div class="buscador-card">
+            <input type="text" id="buscador" placeholder="Buscar citas por palabras..." oninput="buscar()">
+        </div>
 
-        <button onclick="mostrarAutores()">Autores</button>
-        <button onclick="mostrarObras()">Obras</button>
+        <div class="botones">
+            <button onclick="mostrarAutores()">Autores</button>
+            <button onclick="mostrarObras()">Obras</button>
+        </div>
     </nav>
 
     <main id="contenido"></main>
+
+    <footer>
+        <p>© 2025 Citas Célebres • Propiedad de Ángel Bitrián</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
