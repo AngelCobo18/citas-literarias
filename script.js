@@ -1,3 +1,19 @@
+// Función para mostrar cita del día
+function citaDelDia() {
+    const hoy = new Date().getDate();
+    const index = hoy % citas.length;
+    const cita = citas[index];
+
+    document.getElementById("cita-texto").innerText = `"${cita.texto}"`;
+    document.getElementById("cita-autor").innerText = `— ${cita.autor}${cita.obra ? ', ' + cita.obra : ''}`;
+}
+citaDelDia();
+
+// Función para volver a inicio desde menú
+function mostrarInicio() {
+    citaDelDia();
+    document.getElementById("contenido").innerHTML = "";
+}
 // ===========================
 // BASE DE DATOS DE CITAS
 // ===========================
@@ -122,3 +138,4 @@ function verObra(titulo) {
     const resultados = citas.filter(c => c.obra === titulo);
     mostrarResultados(resultados, `Citas de "${titulo}"`);
 }
+
