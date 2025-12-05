@@ -3,33 +3,33 @@
 ======================= */
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #121212; /* negro carbón */
-    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    background: #DEDEDE; /* color base */
+    color: #740B1E; /* texto principal */
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
     margin-bottom: 10px;
+    color: #8C001A; /* énfasis principal */
 }
 
 /* =======================
    HEADER
 ======================= */
 header {
-    background: #1c1c1c;
-    color: #d4af37; /* dorado tenue */
+    background: #B7B7B7;
     padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-bottom: 2px solid #D4AF37; /* detalles */
 }
 
 #cita-del-dia {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 15px;
     line-height: 1.5;
+    color: #740B1E;
 }
 
 /* =======================
@@ -44,10 +44,10 @@ nav {
 }
 
 .buscador-card {
-    background: #1c1c1c;
+    background: #B7B7B7;
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     width: 100%;
     max-width: 500px;
 }
@@ -56,13 +56,13 @@ nav {
     width: 100%;
     padding: 10px 15px;
     font-size: 16px;
-    border: none;
+    border: 2px solid #D4AF37;
     border-radius: 8px;
     outline: none;
 }
 
 .buscador-card input:focus {
-    box-shadow: 0 0 10px #d4af37;
+    box-shadow: 0 0 10px #740B1E;
 }
 
 /* Botones */
@@ -74,19 +74,20 @@ nav {
 }
 
 button {
-    background: #d4af37;
-    color: #121212;
-    border: none;
+    background: #740B1E;
+    color: #DEDEDE;
+    border: 2px solid #D4AF37;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 900;
     transition: all 0.3s ease;
 }
 
 button:hover {
+    background: #8C001A;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* =======================
@@ -99,12 +100,12 @@ main {
 }
 
 .cita {
-    background: #1c1c1c;
+    background: #DEDEDE;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    font-family: 'Playfair Display', serif;
+    border-left: 5px solid #D4AF37;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     line-height: 1.6;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -112,13 +113,13 @@ main {
 
 .cita:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 .cita small {
     display: block;
     margin-top: 10px;
-    color: #d4af37;
+    color: #8C001A;
     font-size: 14px;
 }
 
@@ -129,17 +130,18 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    color: #aaa;
-    background: #1c1c1c;
+    color: #740B1E;
+    background: #B7B7B7;
     margin-top: 40px;
+    border-top: 2px solid #D4AF37;
 }
 
 /* =======================
    RESPONSIVE
 ======================= */
 @media (max-width: 600px) {
-    h1 { font-size: 28px; }
-    #cita-del-dia { font-size: 22px; }
+    h1 { font-size: 32px; }
+    #cita-del-dia { font-size: 24px; }
     .cita { font-size: 18px; }
     .botones { flex-direction: column; }
 }
