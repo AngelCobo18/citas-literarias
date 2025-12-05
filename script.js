@@ -1,19 +1,3 @@
-// Función para mostrar cita del día
-function citaDelDia() {
-    const hoy = new Date().getDate();
-    const index = hoy % citas.length;
-    const cita = citas[index];
-
-    document.getElementById("cita-texto").innerText = `"${cita.texto}"`;
-    document.getElementById("cita-autor").innerText = `— ${cita.autor}${cita.obra ? ', ' + cita.obra : ''}`;
-}
-citaDelDia();
-
-// Función para volver a inicio desde menú
-function mostrarInicio() {
-    citaDelDia();
-    document.getElementById("contenido").innerHTML = "";
-}
 // ===========================
 // BASE DE DATOS DE CITAS
 // ===========================
@@ -58,7 +42,10 @@ const citas = [
 function citaDelDia() {
     const hoy = new Date().getDate();
     const index = hoy % citas.length;
-    document.getElementById("cita-del-dia").innerText = citas[index].texto;
+    const cita = citas[index];
+
+    document.getElementById("cita-texto").innerText = `"${cita.texto}"`;
+    document.getElementById("cita-autor").innerText = `— ${cita.autor}${cita.obra ? ', ' + cita.obra : ''}`;
 }
 citaDelDia();
 
@@ -127,7 +114,7 @@ function verAutor(nombre) {
 function mostrarObras() {
     const obras = [...new Set(citas.map(c => c.obra))].filter(o => o !== "").sort();
     const cont = document.getElementById("contenido");
-    cont.innerHTML = "<h2>Obras</h2>";
+    cont.innerHTML = "<h2>Libros</h2>";
 
     obras.forEach(o => {
         cont.innerHTML += `<p class="link" onclick="verObra('${o}')">${o}</p>`;
@@ -139,3 +126,10 @@ function verObra(titulo) {
     mostrarResultados(resultados, `Citas de "${titulo}"`);
 }
 
+// ===========================
+// INICIO
+// ===========================
+function mostrarInicio() {
+    citaDelDia();
+    document.getElementById("contenido").innerHTML = "";
+}
